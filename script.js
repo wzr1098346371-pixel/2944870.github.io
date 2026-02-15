@@ -51,8 +51,16 @@ window.addEventListener("DOMContentLoaded", () => {
     "top-right"
   );
   map.addControl(new mapboxgl.NavigationControl(), "top-right");
+  
+map.addControl(
+  new mapboxgl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+    showUserHeading: true
+  }),
+  "top-right"
+);
   map.addControl(new mapboxgl.ScaleControl({ maxWidth: 140, unit: "metric" }), "bottom-right");
-
  /* ---------- popup on click (RESTORED) ---------- */
   map.on("click", (event) => {
     // Only respond when clicking a hotel feature
