@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     container: "map",
     style: "mapbox://styles/2944870w/cmllj66by007501sk15cd2gsm",
     center: [-3.189, 55.9521],
-    zoom: 12
+    zoom: 15
   });
 
   /* ---------- constants ---------- */
